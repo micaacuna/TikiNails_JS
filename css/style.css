@@ -1,0 +1,756 @@
+/*TIPOGRAFÍAS*/
+@import url("https://use.typekit.net/dfr4xfr.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+/*RESET*/
+*{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: inherit;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+/*!----INDEX----*/
+
+/*HEADER*/
+body{
+    background-color: #faf1dc;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+}
+
+header div{
+    display:flex;
+    align-items: center;
+}
+header div h1{
+    font-family: "ohno-softie-variable",sans-serif;
+    font-variation-settings: 'wght' 550;
+    color: #f7bac6;
+    letter-spacing: 3px;
+    word-spacing: 6px;
+    font-size: 50px;
+    border-radius: 5px; /* Esquinas redondeadas */
+    text-shadow: 2px 2px 4px #36382e;
+    margin-left: 10px;
+    flex-wrap:wrap;
+}
+header div img{
+    height: 80px;
+    margin-left: 20px;
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: end;
+}
+
+header nav ul{
+    text-align: right;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header nav ul li {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style:normal;
+    font-size: 18px ;
+    letter-spacing: 1px;
+    color: #36382e;
+    padding: 8px;
+    margin: 8px;
+}
+
+/*MAIN*/
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+main h2{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style:normal;
+    font-size: 35px;
+    color: #f7bac6;
+    text-shadow: 2px 2px 8px #36382e;
+    text-align: center;
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Esquinas redondeadas */
+    margin-top: 20px;
+}
+
+main h3{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style:normal;
+    font-size: 20px;
+    color: #36382e;
+}
+
+main p{
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #36382e;
+    font-size: 15px;
+}
+
+main img{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    margin-top: 20px;
+} 
+main section div a{
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #36382e;
+    font-size: 15px;
+    background-color: #d2e6e4;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+/*SECCIÓN HERO*/
+.hero {
+    text-align: center;
+    height: 250px;
+    background-image: url("../img/banner.png");
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.hero h2{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style:normal;
+    font-size: 40px ;
+    color: #faf6ed;
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Esquinas redondeadas */
+    text-shadow: 2px 2px 5px #36382e;
+}
+
+.hero  a{
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 18px;
+    background-color: #d2e6e4;
+    color: #36382e;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+/*SECCION SERVICIOS*/
+
+.servicios .serv-cont{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.servicios .serv-cont div {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*SECCIÓN PRODUCTOS*/
+.productos .prod-cont {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.productos .prod-cont div {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.productos .prod-cont div img{
+    padding: 20px;
+}
+
+/*FOOTER*/
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-top: #36382e solid 2px;
+}
+
+.redes img{
+    height: 40px;
+    margin-left: 20px;
+}
+.formulario{
+    text-align: right;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    width: 45%;
+    justify-content: end;
+}
+
+.formulario form input {
+    background-color: #faf6ed;
+    padding: 5px;
+    border-radius: 20px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.formulario p{
+    margin-right: 10px;
+}
+
+.formulario form button{
+    background-color: #d2e6e4;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #36382e;
+}
+
+
+/*!----NOSOTROS----*/
+
+.instagram{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.insta{
+    width: 60% ;
+    height: 650px;
+    border: 0;overflow: hidden ;
+
+}
+
+.consulta div form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+
+.consulta div{
+    margin: 20px;
+}
+.consulta div input{
+    border: #36382e solid 1px;
+    background-color: #faf6ed;
+    padding: 10px;
+    border-radius: 20px;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: left;
+    width: 80%;
+}
+
+.comentario{
+    height: 100px;
+}
+.mapa{
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+}
+.mapa iframe{
+    width: 80%;
+}
+
+.infodellocal{
+    width: 20%;
+    padding: 2%;
+}
+
+.infodellocal p {
+    font-size: 20px;
+    text-align: justify;
+}
+
+
+/*!----PRODUCTOS----*/
+/*BARRA BUSCADOR*/
+.buscador{
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #36382e;
+}
+
+.buscador button {
+    background-color: #d2e6e4;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.buscador .barra-busca{
+    display: flex;
+    justify-content: center;
+}
+.buscador form input {
+    background-color: #faf6ed;
+    padding: 5px;
+    border-radius: 20px;
+    text-align: center;
+    margin-right: 10px;
+}
+/*GRILLA Y FILTROS*/
+
+
+.filtros{
+    font-family: "lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #2f2e38;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.grilla{
+    display: grid;
+    grid-template-columns: 0.5FR 3fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+.grilla aside{
+    justify-self:center ;
+    padding: 20px;
+    border-radius: 8px;
+}
+.GRILLA ASIDE H3{
+    margin-top: 0;
+}
+
+.filtros label{
+    margin-bottom: 10px;
+}
+
+.grilla .prod-grilla{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:20px
+}
+
+.grilla .prod-grilla h2{
+    grid-column: span 3;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.grilla .prod-grilla img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    padding: 50px;
+}
+
+
+/*!----SERVICIOS----*/
+
+.page-servicios{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.page-servicios .serv{
+    display: flex;
+    margin: 20px;
+    justify-content:center ;
+    align-items: center;
+    width: 90%;
+    }
+
+
+
+.page-servicios .serv div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%;
+}
+
+.page-servicios .serv div h3{
+    font-size: 20px;
+}
+
+.page-servicios .serv div p{
+    margin-left: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+/*!----TURNOS----*/
+
+/*HERO*/
+.hero-turnos {
+    text-align: center;
+    height: 350px;
+    background-image: url("../img//banner_turnos.png");
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.hero-turnos h2{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style:normal;
+    font-size: 40px ;
+    color: #faf6ed;
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Esquinas redondeadas */
+    text-shadow: 2px 2px 5px #36382e;
+}
+
+.hero-turnos p {
+    font-size: 20px;
+    color: #faf1dc;
+    border-radius: 5px;
+    text-shadow: 2px 2px 4px #36382e;
+}
+
+.manicuras{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.manicuras button{
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #36382e;
+    font-size: 15px;
+    background-color: #f7bac6;
+    border: none;
+    padding: 10px 50px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+/*RESERVA DE SERVICIOS*/
+.reserva{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px;
+}
+
+.reserva div h3{
+    color: #36382e;
+    border-radius: 5px;
+    
+}
+
+.reserva .seleccion, .calendario-cont, .datos-contacto{
+    display: flex;
+    flex-direction: column;
+    
+    line-height: 1.6;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #36382e;
+    padding: 10px;
+    background-color: #d2e6e4;
+    border-radius: 10px;
+    justify-items: center;
+}
+
+.reserva .calendario-cont .calendar{
+    border: none;
+    padding: 5px;
+}
+
+.calendar input{
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #36382e;
+}
+
+.reserva .datos-contacto{
+    display:flex ;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*INFORMACIÓN DE LA RESERVA*/
+
+.info-reserva {
+    border: #2f2e38 solid 1px;
+    border-radius: 10px;
+    background-color: #fcc8d243;
+    margin: 20px;
+    display: grid;
+    grid-template-areas: 
+    "titulo titulo titulo"
+    "caja caja caja"
+    ". . boton"
+    ;
+    
+}
+
+.info-reserva h3{
+    grid-area: titulo;
+    justify-self: center;
+    margin-top: 10px;
+}
+
+.info-reserva .caja-reserva{
+    grid-area: caja;
+    margin: 20px;
+    border: #2f2e38 solid 1px;
+    width: 200px;
+    border-radius: 10px;
+    
+}
+.info-reserva button{
+    grid-area: boton;
+    width: 100px;
+    justify-self: end;
+    margin: 20px;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #36382e;
+    background-color: #f7bac6;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.caja-reserva p {
+    margin: 10px 20px;
+}
+
+/*!----DISEÑO RESPONSIVE----*/
+
+@media screen and (max-width:1150px) {
+    header {
+        flex-direction: column;
+        height: 150px;
+        align-items: center;
+    }
+
+    header nav{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .HERO{
+        height: 200px;
+    }
+
+    .hero h2{
+        font-size: 30px;
+    }
+
+    main img{
+        height: 200px;
+        width: 200px
+    }
+
+    .insta{
+        height: 500px;
+    }
+
+.grilla .prod-grilla{
+    grid-template-columns: repeat(2,1fr);
+}
+
+.grilla .prod-grilla h2{
+    grid-column: span 2;
+}
+
+
+.grilla .prod-grilla img{
+    padding: 2%;
+}
+}
+
+
+
+@media screen and (max-width:875px) {
+    .productos .prod-cont{
+        flex-wrap: wrap;
+    }
+    .servicios .serv-cont{
+        flex-wrap: wrap;
+    }
+    .instagram{
+        height: auto
+    }
+    .insta{
+        width: 80%;
+    }
+
+    
+.grilla .prod-grilla{
+    grid-template-columns: 1fr;
+}
+
+.grilla .prod-grilla h2{
+    grid-column: span 1;
+}
+
+
+.grilla .prod-grilla img{
+    padding: 2%;
+}
+.mapa{
+    flex-direction: column;
+    align-items: center;
+}
+
+.infodellocal{
+    width: 80%;
+}
+
+.page-servicios .serv div p{
+    font-size: 14px;
+}
+}
+
+@media screen and (max-width:658px) {
+    .page-servicios .serv{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .page-servicios .serv div{
+        width: 90%;
+    }
+}
+
+
+@media screen and (max-width:560px) {
+    header{
+        height: 100px;
+    }
+    header div h1{
+        font-size: 35px;
+    }
+    header div img{
+        height: 60px;
+    }
+    header nav ul li a {
+        font-size: 14px;
+    }
+
+    .buscador form  {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100px;
+    }
+
+    .buscador .barra-busca{
+        align-content: center;
+    }
+
+    .formulario p {
+        font-size: 12px;
+    }
+
+    .formulario form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .formulario form input {
+        font-size: 12px;
+    }
+
+    .formulario form button {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    
+.redes img{
+    height: 30px;
+}
+
+.infodellocal p{
+    font-size: 15px;
+}
+
+.instagram{
+    height: 500px;
+    /*!!!Tengo que cambiar a 2 columnas acá!!!*/
+}
+}
+
+
+
+
+
+
+@media screen and (max-width:480px) {
+    header nav ul li {
+        margin: 2px;
+        padding: 2px;
+    }
+}

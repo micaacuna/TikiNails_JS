@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Tiki Nails</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="../img/logo_tiki.png" alt="Logo Tiki Nails">
+            <h1>Tiki Nails Studio</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a> </li>
+                <li><a href="./nosotros.html">Nosotros</a> </li>
+                <li><a href="./productos.html">Productos</a> </li>
+                <li><a href="./servicios.html">Servicios</a> </li>
+                <li><a href="./turnos.html">Turnos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero-turnos">
+            <h2>Turnos</h2>
+            <p>Acá vas a poder visualizar todos los turnos que tenemos disponibles con cada manicura, seleccionar el
+                servicio que te quieras realizar y la fecha y hora a reservar.</p>
+        </section>
+        <section class="manicuras">
+            <button>Agendar con Mica</button>
+            <button>Agendar con Nati</button>
+        </section>
+        <section class="reserva">
+            <div class="seleccion">
+                <h3>Seleccioná el servicio</h3>
+                <label>
+                    <input type="radio" name="servicio"> Soft gel
+                </label>
+                <label>
+                    <input type="radio" name="servicio"> Semi permanente
+                </label>
+                <label>
+                    <input type="radio" name="servicio"> Kapping
+                </label>
+                <label>
+                    <input type="radio" name="servicio"> Press on
+                </label>
+            </div>
+            <div class="calendario-cont">
+                <h3>Seleccioná fecha y hora</h3>
+                <div class="calendario">
+                    <p>Calendario</p>
+                    <input type="textarea" placeholder="Calendario"></input><!--Acá va el calendario-->
+                </div>
+                <div class="calendar">
+                    <p>Horas disponibles por día</p>
+                    <input type="textarea" placeholder="Horas disponibles"></input><!--Acá van las horas disponibles-->
+                </div>
+            </div>
+            <div class="datos-contacto">
+                <h3>Datos de contacto</h3>
+                <input type="text" placeholder="Nombre">
+                <input type="email" placeholder="Mail">
+                <input type="tel" placeholder="Teléfono">
+                <input type="textarea" placeholder="Observaciones"></input>
+            </div>
+        </section>
+        <section class="info-reserva">
+            <h3>Información de tus servicios</h3>
+            <div class="caja-reserva">
+                <p>Manicuría</p>
+                <p>$15.000</p>
+                <p>19 de Octubre de 2024</p>
+                <p>1:00 pm a 2:00 pm</p>
+                <button>Limpiar</button>
+            </div>
+            <button>Ir a pagar</button>
+        </section>
+        <section class="calendario-importado">
+            <!-- Google Calendar Appointment Scheduling begin -->
+            <iframe
+                src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3qcU830DrhdFJo7j0VncNSSIQIvVJLKmTXmj90-ZUWWTpGDY3dC0Ml9rCyA_HD27mApGMqRJ0V?gv=true"
+                style="border: 0" width="100%" height="600" frameborder="0"></iframe>
+            <!-- end Google Calendar Appointment Scheduling -->
+        </section>
+    </main>
+    <footer>
+        <div class="redes">
+            <a href="https://wa.me/5491126312719" target="_blank">
+                <img src="../img/wpp.png" alt="Logo Whatsapp">
+            </a>
+            <a href="https://www.instagram.com/tikinailsok/" target="_blank">
+                <img src="../img/insta.png" alt="Logo Instagram">
+            </a>
+            <a href="https://ar.pinterest.com/beluccinails/" target="_blank">
+                <img src="../img/pinterest.png" alt="Logo Pinterest">
+            </a>
+        </div>
+        <div class="formulario">
+            <p>Suscribite a nuestro newsletter</p>
+            <form action="#" method="post">
+                <input type="email" id="email" name="email" placeholder="Correo electrónico">
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </footer>
+</body>
+
+</html>
