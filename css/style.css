@@ -13,52 +13,49 @@
     font-family: inherit;
 }
 
-/*!----INDEX----*/
-
 /*HEADER*/
 body{
     background-color: #faf1dc;
 }
-
 header{
     display: flex;
     justify-content: space-between;
     height: 80px;
+    width: 100%;
+    flex-wrap: nowrap;
 }
 
 header div{
     display:flex;
-    align-items: center;
-}
+    align-items: center;}
+
 header div h1{
     font-family: "ohno-softie-variable",sans-serif;
     font-variation-settings: 'wght' 550;
-    color: #bdf7ba;
+    color: #f7bac6;
     letter-spacing: 3px;
     word-spacing: 6px;
-    font-size: 50px;
     border-radius: 5px; /* Esquinas redondeadas */
     text-shadow: 2px 2px 4px #36382e;
     margin-left: 10px;
-    flex-wrap:wrap;
 }
 header div img{
     height: 80px;
     margin-left: 20px;
 }
 
+.navbar>.container-fluid{
+    width: 50%;
+}
+.navbar-expand-lg{
+    width: 100%;
+
+}
 header nav{
     display: flex;
     align-items: center;
-    width: 50%;
     justify-content: end;
-}
-
-header nav ul{
-    text-align: right;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+    margin-right: 20px;
 }
 
 header nav ul li {
@@ -70,12 +67,6 @@ header nav ul li {
     color: #36382e;
     padding: 8px;
     margin: 8px;
-}
-
-
-header nav ul li a{
-    color: inherit;
-    text-decoration: none;
 }
 /*MAIN*/
 
@@ -170,6 +161,7 @@ main section div a{
     padding: 10px 20px;
     border-radius: 20px;
     transition: background-color 0.3s;
+    text-decoration: none;
 }
 
 /*SECCION SERVICIOS*/
@@ -664,7 +656,6 @@ footer{
 .grilla .prod-grilla img{
     padding: 2%;
 }
-}
 
 
 
@@ -733,11 +724,12 @@ footer{
     header{
         height: 100px;
     }
-    header div h1{
-        font-size: 35px;
-    }
     header div img{
         height: 60px;
+    }
+    .navbar-brand{
+        padding: 0px;
+        margin-right: 0;
     }
     header nav ul li a {
         font-size: 14px;
@@ -794,13 +786,20 @@ footer{
 .infodellocal p{
     font-size: 15px;
 }
-
+}
 @media screen and (max-width:480px) {
-    header nav ul li {
+    header nav ul li{
         margin: 2px;
         padding: 2px;
     }
-}
+    header div h1{
+        font-size: 30px;
+        word-spacing: 2px;
+    }
+
+    header div img{
+        height: 50px;
+    }
     .hero-turnos p{
         font-size: 15px;
     }
@@ -813,5 +812,41 @@ footer{
     }
     .formulario form input{
         margin: 8px;
+    }
+
+    .hero{
+        height: 150px;
+    }
+    .hero h2{
+        font-size: 20px;
+    }
+
+    .hero a{
+        font-size: 14px;
+        padding:5px, 10px
+    }
+
+    main h2{
+        font-size: 25px;
+    }
+
+    .servicios .serv-cont div {
+        height: auto;
+    }
+
+    .productos .prod-cont div {
+        height: auto;
+    }
+}
+
+@media screen and (max-width:391px) {
+    header div h1{
+        font-size: 20px;
+    }
+    header div img{
+        height: 40px;
+    }
+    .navbar-toggler {
+        padding:0px;
     }
 }
