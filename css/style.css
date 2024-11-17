@@ -253,16 +253,45 @@ footer{
 /*!----NOSOTROS----*/
 
 .instagram{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display:grid;
+    grid-template-areas: 
+    "h2 h2 h2"
+    "arroba . . "
+    "publi publi publi "
+    "publi publi publi"
+    ;
+    justify-items: center;
 }
-.insta{
-    width: 60% ;
-    height: 650px;
-    border: 0;overflow: hidden ;
 
+.instagram h2{
+    grid-area: h2;
 }
+.instagram a{
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    color: #f7bac6;
+    font-size: 30px;
+    grid-area: arroba;
+    margin-left: 20px;
+}
+
+.insta {
+    width: 80%;
+    grid-area: publi;
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(2, 1fr); 
+    gap: 10px; 
+    padding: 10px; 
+}
+
+.insta img{
+    width: 100%; 
+    height: auto; 
+    border-radius: 5px; 
+}
+
 
 .consulta div form{
     display: flex;
@@ -473,6 +502,8 @@ footer{
     justify-content: space-evenly;
     padding: 20px;
     margin-bottom: 20px;
+    flex-wrap: wrap;
+
 }
 .manicuras button{
     font-family: "Lato", sans-serif;
@@ -485,6 +516,7 @@ footer{
     padding: 10px 50px;
     border-radius: 20px;
     transition: background-color 0.3s;
+    margin: 10px;
 }
 
 /*RESERVA DE SERVICIOS*/
@@ -492,6 +524,7 @@ footer{
     display: flex;
     justify-content: space-evenly;
     margin: 20px;
+    flex-wrap: wrap;
 }
 
 .reserva div h3{
@@ -503,7 +536,6 @@ footer{
 .reserva .seleccion, .calendario-cont, .datos-contacto{
     display: flex;
     flex-direction: column;
-    
     line-height: 1.6;
     font-family: "Lato", sans-serif;
     font-weight: 500;
@@ -513,6 +545,7 @@ footer{
     background-color: #d2e6e4;
     border-radius: 10px;
     justify-items: center;
+    margin: 10px;
 }
 
 .reserva .calendario-cont .calendar{
@@ -611,9 +644,6 @@ footer{
         width: 200px
     }
 
-    .insta{
-        height: 500px;
-    }
 
 .grilla .prod-grilla{
     grid-template-columns: repeat(2,1fr);
@@ -638,13 +668,6 @@ footer{
     .servicios .serv-cont{
         flex-wrap: wrap;
     }
-    .instagram{
-        height: auto
-    }
-    .insta{
-        width: 80%;
-    }
-
     
 .grilla .prod-grilla{
     grid-template-columns: 1fr;
@@ -657,6 +680,21 @@ footer{
 
 .grilla .prod-grilla img{
     padding: 2%;
+}
+
+.instagram{
+    grid-template-areas: 
+    "h2 h2"
+    "arroba . "
+    "publi publi"
+    "publi publi"
+    ;
+}
+
+.insta {
+
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(3, 1fr); 
 }
 .mapa{
     flex-direction: column;
@@ -727,7 +765,20 @@ footer{
         font-size: 12px;
         padding: 5px;
     }
-
+    .instagram{
+        grid-template-areas: 
+        "h2 "
+        "arroba  "
+        "publi "
+        "publi "
+        ;
+    }
+    
+    .insta {
+    
+        grid-template-columns:  1fr; 
+        grid-template-rows: repeat(4, 1fr); 
+    }
     
 .redes img{
     height: 30px;
@@ -737,20 +788,23 @@ footer{
     font-size: 15px;
 }
 
-.instagram{
-    height: 500px;
-    /*!!!Tengo que cambiar a 2 columnas acá!!!*/
-}
-}
-
-
-
-
-
-
 @media screen and (max-width:480px) {
     header nav ul li {
         margin: 2px;
         padding: 2px;
+    }
+}
+    .hero-turnos p{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:405px) {
+    .formulario{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .formulario form input{
+        margin: 8px;
     }
 }
