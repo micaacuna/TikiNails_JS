@@ -1,0 +1,7 @@
+<h1 align="left">¡Hola!👋</h1>
+
+###
+
+<p align="left">Soy Micaela Acuña y soy una estudiante de Desarrollo Web de CoderHose. Este es mi proyecto para la tienda de mi emprendimiento de manicuría</p>
+
+###
