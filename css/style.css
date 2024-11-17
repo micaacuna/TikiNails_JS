@@ -65,8 +65,10 @@ header nav ul li {
     font-size: 18px ;
     letter-spacing: 1px;
     color: #36382e;
-    padding: 8px;
+    padding: 0px 10px;
     margin: 8px;
+    background-color: #f7bac6b3;
+    border-radius: 50px;
 }
 /*MAIN*/
 
