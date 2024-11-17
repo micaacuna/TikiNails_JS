@@ -33,7 +33,7 @@ header div{
 header div h1{
     font-family: "ohno-softie-variable",sans-serif;
     font-variation-settings: 'wght' 550;
-    color: #f7bac6;
+    color: #bdf7ba;
     letter-spacing: 3px;
     word-spacing: 6px;
     font-size: 50px;
@@ -72,6 +72,11 @@ header nav ul li {
     margin: 8px;
 }
 
+
+header nav ul li a{
+    color: inherit;
+    text-decoration: none;
+}
 /*MAIN*/
 
 main{
@@ -210,7 +215,9 @@ footer{
     padding: 10px;
     border-top: #36382e solid 2px;
 }
-
+.redes a{
+    text-decoration: none;
+}
 .redes img{
     height: 40px;
     margin-left: 20px;
