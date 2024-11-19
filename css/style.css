@@ -67,8 +67,9 @@ header nav ul li {
     color: #36382e;
     padding: 0px 10px;
     margin: 8px;
-    background-color: #f7bac6b3;
+    background-color: #faf1dc;
     border-radius: 50px;
+    text-align: center;
 }
 /*MAIN*/
 
@@ -82,8 +83,9 @@ main h2{
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     font-style:normal;
+    background-color:#f7bac6;
     font-size: 35px;
-    color: #f7bac6;
+    color: #faf1dc;
     text-shadow: 2px 2px 8px #36382e;
     text-align: center;
     padding: 10px; /* Espaciado interno */
@@ -150,6 +152,7 @@ main section div a{
     padding: 10px; /* Espaciado interno */
     border-radius: 5px; /* Esquinas redondeadas */
     text-shadow: 2px 2px 5px #36382e;
+    background-color:inherit;
 }
 
 .hero  a{
@@ -164,6 +167,10 @@ main section div a{
     border-radius: 20px;
     transition: background-color 0.3s;
     text-decoration: none;
+}
+
+.hero a:hover{
+    background-color: #faf1dc;
 }
 
 /*SECCION SERVICIOS*/
@@ -182,6 +189,15 @@ main section div a{
     align-items: center;
 }
 
+.servicios .serv-cont div a{
+    text-decoration: none;
+}
+
+.servicios .serv-cont div a:hover{
+    background-color: #f7bac6;
+}
+
+
 /*SECCIÓN PRODUCTOS*/
 .productos .prod-cont {
     display: flex;
@@ -198,6 +214,14 @@ main section div a{
 
 .productos .prod-cont div img{
     padding: 20px;
+}
+
+.productos .prod-cont div a{
+    text-decoration: none;
+}
+
+.productos .prod-cont div a:hover{
+    background-color: #f7bac6;
 }
 
 /*FOOTER*/
@@ -250,6 +274,10 @@ footer{
     color: #36382e;
 }
 
+.formulario form button:hover{
+    background-color: #f7bac6;
+}
+
 
 /*!----NOSOTROS----*/
 
@@ -292,7 +320,11 @@ footer{
     height: auto; 
     border-radius: 5px; 
 }
-
+.consulta{
+    display: flex;
+    flex-direction: column;
+    
+}
 
 .consulta div form{
     display: flex;
@@ -300,7 +332,6 @@ footer{
     align-items: center;
     width: 100%;
 }
-
 
 .consulta div{
     margin: 20px;
@@ -320,6 +351,26 @@ footer{
 .comentario{
     height: 100px;
 }
+
+.consulta button{
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+    background-color: #f7bac6;
+    color: #36382e;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+    width: 20%;
+    margin: auto;
+}
+
+.consulta button:hover{
+    background-color: #d2e6e4;
+}
+
 .mapa{
     display: flex;
     justify-content: center;
@@ -359,6 +410,10 @@ footer{
     border-radius: 20px;
 }
 
+.buscador button:hover{
+    background-color: #f7bac6;
+}
+
 .buscador .barra-busca{
     display: flex;
     justify-content: center;
@@ -370,10 +425,60 @@ footer{
     text-align: center;
     margin-right: 10px;
 }
+
+.texto{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.texto p {
+    margin: 0;
+    margin-left: 20px;
+}
+
+.texto .wpp{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.texto button{
+    background-color: #d2e6e4;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    margin-right: 20px;
+}
+
+.texto button:hover{
+    background-color: #f7bac6;
+}
+.texto img{
+    height: 40px;
+    width: auto;
+    margin: 0;
+}
 /*GRILLA Y FILTROS*/
 
+.grilla {
+    display: grid;
+    grid-template-columns: 0.5FR 3fr;
+    gap: 20px;
+    padding: 20px;
+}
 
-.filtros{
+.grilla aside {
+    justify-self: center;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.grilla aside h3 {
+    margin-top: 0;
+}
+
+.filtros {
     font-family: "lato", sans-serif;
     font-weight: 500;
     font-style: normal;
@@ -383,48 +488,63 @@ footer{
     flex-direction: column;
 }
 
-
-.grilla{
-    display: grid;
-    grid-template-columns: 0.5FR 3fr;
-    gap: 20px;
-    padding: 20px;
-}
-
-
-.grilla aside{
-    justify-self:center ;
-    padding: 20px;
-    border-radius: 8px;
-}
-.GRILLA ASIDE H3{
-    margin-top: 0;
-}
-
-.filtros label{
+.filtros label {
     margin-bottom: 10px;
 }
 
-.grilla .prod-grilla{
+.grilla .prod-grilla {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap:20px
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-self: center;
 }
 
-.grilla .prod-grilla h2{
+.grilla .prod-grilla h2 {
     grid-column: span 3;
     text-align: center;
     margin-bottom: 20px;
 }
 
+.grilla .prod-grilla .producto { 
+    position: relative; /* Para posicionar el precio sobre la imagen */
+    text-align: center; 
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+}
 
-.grilla .prod-grilla img{
+.grilla .prod-grilla img {
     width: 100%;
     height: auto;
     border-radius: 8px;
-    padding: 50px;
 }
 
+.grilla .prod-grilla .descripcion { 
+    margin-top: 10px; 
+    color: #2f2e38;
+    font-size: 14px;
+}
+
+.grilla .prod-grilla .precio { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0); 
+    color: #2f2e38; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+    opacity: 0; /* Oculto por defecto */
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+.grilla .prod-grilla .producto:hover .precio { 
+    background-color: #faf1dc; 
+    opacity: 0.75;
+}
 
 /*!----SERVICIOS----*/
 
@@ -462,6 +582,13 @@ footer{
     line-height: 1.6;
 }
 
+.page-servicios .serv div a{
+    text-decoration: none;
+}
+
+.page-servicios .serv div a:hover{
+    background-color: #f7bac6;
+}
 
 /*!----TURNOS----*/
 
@@ -518,6 +645,10 @@ footer{
     border-radius: 20px;
     transition: background-color 0.3s;
     margin: 10px;
+}
+
+.manicuras button:hover{
+    background-color: #d2e6e4;
 }
 
 /*RESERVA DE SERVICIOS*/
@@ -612,6 +743,10 @@ footer{
     border-radius: 20px;
     transition: background-color 0.3s;
     text-align: center;
+}
+
+.info-reserva button:hover{
+    background-color: #d2e6e4;
 }
 
 .caja-reserva p {
@@ -710,6 +845,16 @@ footer{
 }
 }
 
+@media screen and (max-width:740px){
+    .texto p{
+        font-size: 13px;
+    }
+    .texto .wpp {
+        font-size: 13px;
+    }
+}
+
+
 @media screen and (max-width:658px) {
     .page-servicios .serv{
         flex-direction: column;
@@ -718,6 +863,24 @@ footer{
 
     .page-servicios .serv div{
         width: 90%;
+    }
+
+    .buscador{
+        font-size: 12px;
+    }
+
+    .grilla{
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+
+    .grilla .prod-grilla img{
+        width: 300px;
+    }
+
+
+    .texto .wpp {
+        font-size: 11px;
     }
 }
 
@@ -800,7 +963,7 @@ footer{
     }
 
     header div img{
-        height: 50px;
+        height: 60px;
     }
     .hero-turnos p{
         font-size: 15px;
@@ -843,12 +1006,19 @@ footer{
 
 @media screen and (max-width:391px) {
     header div h1{
-        font-size: 20px;
+        font-size: 28px;
     }
     header div img{
-        height: 40px;
+        height: 50px;
     }
     .navbar-toggler {
         padding:0px;
+    }
+    header nav ul li {
+        font-size: 12px;
+    }
+
+    .instagram a{
+        font-size: 20px;
     }
 }
