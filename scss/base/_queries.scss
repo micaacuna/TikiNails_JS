@@ -1,3 +1,9 @@
+@media screen and (max-width:1280px) {
+    main .servicios .serv-cont div img {
+        height: 200px;
+        width: 200px
+    }
+}
 @media screen and (max-width:1150px) {
     header {
         flex-direction: column;

@@ -14,9 +14,11 @@ main {
         align-items: center;
 
         a {
-            @include boton(#d2e6e4,700,italic,18px);
+            @include boton(#d2e6e4, 700, italic, 18px);
+
             &:hover {
-                background-color:nth($colores, 1);
+                background-color: nth($colores, 1);
+                transform: scale(1.2)
             }
         }
     }
@@ -46,9 +48,11 @@ main {
                 }
 
                 a {
-                    @include boton(#d2e6e4,500,normal,15px);
+                    @include boton(#d2e6e4, 500, normal, 15px);
+
                     &:hover {
                         background-color: nth($colores, 2);
+                        transform: scale(1.1);
                     }
                 }
             }
@@ -81,9 +85,11 @@ main {
                 }
 
                 a {
-                    @include boton(#d2e6e4,500,normal,15px);
+                    @include boton(#d2e6e4, 500, normal, 15px);
+
                     &:hover {
                         background-color: nth($colores, 2);
+                        transform: scale(1.1);
                     }
                 }
             }
@@ -94,17 +100,19 @@ main {
 /*!----NOSOTROS----*/
 main {
     .instagram {
-        display:grid;
-        grid-template-areas: 
-        "h2 h2 h2"
-        "arroba . . "
-        "publi publi publi "
-        "publi publi publi"
+        display: grid;
+        grid-template-areas:
+            "h2 h2 h2"
+            "arroba . . "
+            "publi publi publi "
+            "publi publi publi"
         ;
         justify-items: center;
+
         h2 {
             grid-area: h2;
         }
+
         a {
             font-family: $fuente-3;
             font-weight: 900;
@@ -114,18 +122,20 @@ main {
             grid-area: arroba;
             margin-left: 20px;
         }
+
         .insta {
             width: 80%;
             grid-area: publi;
-            display: grid; 
-            grid-template-columns: repeat(3, 1fr); 
-            grid-template-rows: repeat(2, 1fr); 
-            gap: 10px; 
-            padding: 10px; 
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 10px;
+            padding: 10px;
+
             img {
-                width: 100%; 
-                height: auto; 
-                border-radius: 5px; 
+                width: 100%;
+                height: auto;
+                border-radius: 5px;
             }
         }
     }
@@ -133,13 +143,16 @@ main {
     .consulta {
         display: flex;
         flex-direction: column;
+
         div {
             margin: 20px;
+
             form {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 width: 100%;
+
                 input {
                     border: nth($colores, 4) solid 1px;
                     background-color: #faf6ed;
@@ -151,40 +164,49 @@ main {
                     text-align: left;
                     width: 80%;
                 }
-                .comentario{
+
+                .comentario {
                     height: 100px;
                 }
-                }
             }
-            button{
-                @include boton(#f7bac6,700,normal,18px);
-                width: 20%;
-                margin: auto;
-                &:hover {
-                    background-color: nth($colores, 3);
-                }
+        }
+
+        button {
+            @include boton(#f7bac6, 700, normal, 18px);
+            width: 20%;
+            margin: auto;
+
+            &:hover {
+                background-color: nth($colores, 3);
+                transform: scale(1.1);
             }
+        }
     }
-    .mapa{
+
+    .mapa {
         display: flex;
         justify-content: center;
         margin: 2%;
-        iframe{
+
+        iframe {
             width: 80%;
         }
-        .infodellocal{
+
+        .infodellocal {
             width: 20%;
             padding: 2%;
-            p{
+
+            p {
                 font-size: 20px;
                 text-align: justify;
             }
         }
     }
 }
+
 /*!----PRODUCTOS----*/
-main{
-    .buscador{
+main {
+    .buscador {
         display: flex;
         justify-content: space-between;
         padding: 1%;
@@ -192,10 +214,12 @@ main{
         font-weight: 500;
         font-style: normal;
         color: nth($colores, 4);
-        .barra-busca{
+
+        .barra-busca {
             display: flex;
             justify-content: center;
-            input{
+
+            input {
                 background-color: #faf6ed;
                 padding: 5px;
                 border-radius: 20px;
@@ -203,55 +227,69 @@ main{
                 margin-right: 10px;
             }
         }
-        form{
-            button{
-                @include boton(#d2e6e4,500,normal,15px);
-                &:hover{
+
+        form {
+            button {
+                @include boton(#d2e6e4, 500, normal, 15px);
+
+                &:hover {
                     background-color: nth($colores, 2);
+                    transform: scale(1.1);
                 }
             }
         }
     }
-    .texto{
+
+    .texto {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        p{
+
+        p {
             margin: 0;
             margin-left: 20px;
         }
-        .wpp{
+
+        .wpp {
             margin-right: 20px;
             display: flex;
             justify-content: end;
             align-items: center;
-            button{
-                @include boton(#d2e6e4,500,normal,15px);
+
+            button {
+                @include boton(#d2e6e4, 500, normal, 15px);
                 margin-right: 20px;
-                &:hover{
+
+                &:hover {
                     background-color: nth($colores, 2);
+                    transform: scale(1.1);
                 }
             }
-            img{
+
+            img {
                 height: 40px;
                 width: auto;
                 margin: 0;
             }
         }
     }
-    .grilla{
+
+    .grilla {
         display: grid;
         grid-template-columns: 0.5FR 3fr;
         gap: 20px;
         padding: 20px;
-        aside{
+
+        aside {
             justify-self: center;
             padding: 20px;
             border-radius: 8px;
-            h3{
+
+            h3 {
                 margin-top: 0;
             }
-            .filtros{
+
+            .filtros {
                 font-family: $fuente-3;
                 font-weight: 500;
                 font-style: normal;
@@ -259,53 +297,64 @@ main{
                 font-size: 15px;
                 display: flex;
                 flex-direction: column;
-                label{
+
+                label {
                     margin-bottom: 10px;
                 }
             }
         }
-        .prod-grilla{
+
+        .prod-grilla {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
             justify-self: center;
-            h2{
+
+            h2 {
                 grid-column: span 3;
                 text-align: center;
                 margin-bottom: 20px;
             }
-            .producto{
-                position: relative; /* Para posicionar el precio sobre la imagen */
-                text-align: center; 
+
+            .producto {
+                position: relative;
+                /* Para posicionar el precio sobre la imagen */
+                text-align: center;
                 font-family: $fuente-3;
                 font-size: 14px;
-                img{
+
+                img {
                     width: 100%;
                     height: auto;
                     border-radius: 8px;
                 }
-                .precio{
+
+                .precio {
                     position: absolute;
                     top: 0;
                     left: 0;
                     width: 100%;
                     height: 100%;
-                    background-color: rgba(255, 255, 255, 0); 
-                    color: #2f2e38; 
+                    background-color: rgba(255, 255, 255, 0);
+                    color: #2f2e38;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     font-size: 25px;
                     font-weight: bold;
-                    opacity: 0; /* Oculto por defecto */
-                    transition: all 0.3s ease; /* Transición suave */
-                    &:hover{
-                            background-color:nth($colores, 1); 
-    opacity: 0.75;
+                    opacity: 0;
+                    /* Oculto por defecto */
+                    transition: all 0.3s ease;
+
+                    /* Transición suave */
+                    &:hover {
+                        background-color: nth($colores, 1);
+                        opacity: 0.75;
                     }
                 }
-                .descripcion{
-                    margin-top: 10px; 
+
+                .descripcion {
+                    margin-top: 10px;
                     color: #2f2e38;
                     font-size: 14px;
                 }
@@ -315,8 +364,8 @@ main{
 }
 
 /*!----SERVICIOS----*/
-main{
-    .buscador{
+main {
+    .buscador {
         display: flex;
         justify-content: space-between;
         padding: 1%;
@@ -324,10 +373,12 @@ main{
         font-weight: 500;
         font-style: normal;
         color: nth($colores, 4);
-        .barra-busca{
+
+        .barra-busca {
             display: flex;
             justify-content: center;
-            input{
+
+            input {
                 background-color: #faf6ed;
                 padding: 5px;
                 border-radius: 20px;
@@ -335,47 +386,58 @@ main{
                 margin-right: 10px;
             }
         }
-        form{
-            button{
-                @include boton(#d2e6e4,500,normal,15px); 
-                &:hover{
+
+        form {
+            button {
+                @include boton(#d2e6e4, 500, normal, 15px);
+
+                &:hover {
                     background-color: nth($colores, 2);
+                    transform: scale(1.1);
                 }
             }
         }
     }
-    .page-servicios{
+
+    .page-servicios {
         display: flex;
         flex-direction: column;
         margin: 20px;
-        .serv{
+
+        .serv {
             display: flex;
             margin: 20px;
-            justify-content:center ;
+            justify-content: center;
             align-items: center;
             width: 90%;
-            img{
+
+            img {
                 height: 300px;
                 width: 300px;
                 object-fit: cover;
                 margin-top: 20px;
                 padding: 20px;
             }
-            div{
+
+            div {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: space-between;
                 width: 75%;
-                p{
+
+                p {
                     margin-left: 20px;
                     font-size: 18px;
                     line-height: 1.6;
                 }
-                a{
-                    @include boton(#d2e6e4,500,normal,15px);
-                    &:hover{
+
+                a {
+                    @include boton(#d2e6e4, 500, normal, 15px);
+
+                    &:hover {
                         background-color: nth($colores, 2);
+                        transform: scale(1.1);
                     }
                 }
             }
@@ -384,39 +446,44 @@ main{
 }
 
 /*!----TURNOS----*/
-main{
-    .hero-turnos{
+main {
+    .hero-turnos {
         text-align: center;
         height: 350px;
         background-image: url("../img//banner_turnos.png");
-        background-position:center;
+        background-position: center;
         background-repeat: no-repeat;
-        background-size:cover;
+        background-size: cover;
         background-attachment: fixed;
         @extend %centrado;
         align-items: center;
 
-        p{
+        p {
             font-size: 20px;
-            color:nth($colores, 1);
+            color: nth($colores, 1);
             border-radius: 5px;
             text-shadow: 2px 2px 4px nth($colores, 4);
         }
     }
-    .manicuras{
+
+    .manicuras {
         @extend %evenly;
         padding: 20px;
         margin-bottom: 20px;
         flex-wrap: wrap;
-        button{
-            @include boton(#f7bac6,500,normal,15px);
+
+        button {
+            @include boton(#f7bac6, 500, normal, 15px);
             margin: 10px;
-            &:hover{
+
+            &:hover {
                 background-color: nth($colores, 3);
+                transform: scale(1.1);
             }
         }
     }
-    .reserva{
+
+    .reserva {
         display: flex;
         flex-direction: row;
         line-height: 1.6;
@@ -432,7 +499,8 @@ main{
         padding: 5px;
         width: 100%;
         justify-content: center;
-        .seleccion{
+
+        .seleccion {
             display: flex;
             flex-direction: column;
             line-height: 1.6;
@@ -444,11 +512,13 @@ main{
             background-color: nth($colores, 3);
             border-radius: 10px;
             justify-items: center;
-            h3{
+
+            h3 {
                 border-radius: 5px;
             }
         }
-        .calendario-cont{
+
+        .calendario-cont {
             display: flex;
             flex-direction: column;
             line-height: 1.6;
@@ -464,10 +534,12 @@ main{
             margin-right: 90px;
             border: none;
             padding: 5px;
-            .calendar{
+
+            .calendar {
                 border: none;
                 padding: 5px;
-                input{
+
+                input {
                     font-family: $fuente-3;
                     font-weight: 500;
                     font-style: normal;
@@ -475,7 +547,8 @@ main{
                 }
             }
         }
-        .datos-contacto{
+
+        .datos-contacto {
             display: flex;
             flex-direction: column;
             line-height: 1.6;
@@ -487,62 +560,72 @@ main{
             background-color: nth($colores, 3);
             border-radius: 10px;
             justify-items: center;
-            display:flex ;
+            display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
     }
-    .info-reserva{
+
+    .info-reserva {
         border: #2f2e38 solid 1px;
         border-radius: 10px;
         background-color: #fcc8d243;
         margin: 20px;
         display: grid;
-        grid-template-areas: 
-        "titulo titulo titulo"
-        "caja caja caja"
-        ". . boton"
+        grid-template-areas:
+            "titulo titulo titulo"
+            "caja caja caja"
+            ". . boton"
         ;
         grid-area: caja;
-        margin: 20px;  
+        margin: 20px;
         border: #2f2e38 solid 1px;
         width: 95%;
         border-radius: 10px;
-        h3{
+
+        h3 {
             grid-area: titulo;
             justify-self: center;
             margin-top: 10px;
         }
-        .caja-reserva{
+
+        .caja-reserva {
             grid-area: caja;
             margin: 20px;
             border: #2f2e38 solid 1px;
             width: 200px;
             border-radius: 10px;
-            p{
+
+            p {
                 margin: 10px 20px;
             }
-            button{
-                @include boton(#f7bac6,500,normal,15px);
+
+            button {
+                @include boton(#f7bac6, 500, normal, 15px);
                 grid-area: boton;
                 width: 100px;
                 justify-self: end;
                 margin: 20px;
                 text-align: center;
-                &:hover{
+
+                &:hover {
                     background-color: nth($colores, 3);
+                    transform: scale(1.1);
                 }
             }
         }
-        button{
-            @include boton(#f7bac6,500,normal,15px);
+
+        button {
+            @include boton(#f7bac6, 500, normal, 15px);
             grid-area: boton;
             width: 100px;
             justify-self: end;
             margin: 20px;
             text-align: center;
-            &:hover{
+
+            &:hover {
                 background-color: nth($colores, 3);
+                transform: scale(1.1);
             }
         }
     }

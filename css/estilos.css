@@ -139,9 +139,11 @@ main .hero a {
   background-color: #d2e6e4;
   transition: background-color 0.3s;
   text-decoration: none;
+  transition: 1s;
 }
 main .hero a:hover {
   background-color: #faf1dc;
+  transform: scale(1.2);
 }
 main .servicios .serv-cont div {
   height: 400px;
@@ -172,9 +174,11 @@ main .servicios .serv-cont div a {
   background-color: #d2e6e4;
   transition: background-color 0.3s;
   text-decoration: none;
+  transition: 1s;
 }
 main .servicios .serv-cont div a:hover {
   background-color: #f7bac6;
+  transform: scale(1.1);
 }
 main .productos .prod-cont div {
   height: 400px;
@@ -206,9 +210,11 @@ main .productos .prod-cont div a {
   background-color: #d2e6e4;
   transition: background-color 0.3s;
   text-decoration: none;
+  transition: 1s;
 }
 main .productos .prod-cont div a:hover {
   background-color: #f7bac6;
+  transform: scale(1.1);
 }
 
 /*!----NOSOTROS----*/
@@ -282,11 +288,13 @@ main .consulta button {
   background-color: #f7bac6;
   transition: background-color 0.3s;
   text-decoration: none;
+  transition: 1s;
   width: 20%;
   margin: auto;
 }
 main .consulta button:hover {
   background-color: #d2e6e4;
+  transform: scale(1.1);
 }
 main .mapa {
   display: flex;
@@ -338,9 +346,11 @@ main .buscador form button {
   background-color: #d2e6e4;
   transition: background-color 0.3s;
   text-decoration: none;
+  transition: 1s;
 }
 main .buscador form button:hover {
   background-color: #f7bac6;
+  transform: scale(1.1);
 }
 main .texto {
   display: flex;
@@ -369,10 +379,12 @@ main .texto .wpp button {
   background-color: #d2e6e4;
   transition: background-color 0.3s;
   text-decoration: none;
+  transition: 1s;
   margin-right: 20px;
 }
 main .texto .wpp button:hover {
   background-color: #f7bac6;
+  transform: scale(1.1);
 }
 main .texto .wpp img {
   height: 40px;
@@ -417,7 +429,8 @@ main .grilla .prod-grilla h2 {
   margin-bottom: 20px;
 }
 main .grilla .prod-grilla .producto {
-  position: relative; /* Para posicionar el precio sobre la imagen */
+  position: relative;
+  /* Para posicionar el precio sobre la imagen */
   text-align: center;
   font-family: "Lato", sans-serif;
   font-size: 14px;
@@ -440,8 +453,10 @@ main .grilla .prod-grilla .producto .precio {
   align-items: center;
   font-size: 25px;
   font-weight: bold;
-  opacity: 0; /* Oculto por defecto */
-  transition: all 0.3s ease; /* Transición suave */
+  opacity: 0;
+  /* Oculto por defecto */
+  transition: all 0.3s ease;
+  /* Transición suave */
 }
 main .grilla .prod-grilla .producto .precio:hover {
   background-color: #faf1dc;
@@ -486,9 +501,11 @@ main .buscador form button {
   background-color: #d2e6e4;
   transition: background-color 0.3s;
   text-decoration: none;
+  transition: 1s;
 }
 main .buscador form button:hover {
   background-color: #f7bac6;
+  transform: scale(1.1);
 }
 main .page-servicios {
   display: flex;
@@ -533,9 +550,11 @@ main .page-servicios .serv div a {
   background-color: #d2e6e4;
   transition: background-color 0.3s;
   text-decoration: none;
+  transition: 1s;
 }
 main .page-servicios .serv div a:hover {
   background-color: #f7bac6;
+  transform: scale(1.1);
 }
 
 /*!----TURNOS----*/
@@ -572,10 +591,12 @@ main .manicuras button {
   background-color: #f7bac6;
   transition: background-color 0.3s;
   text-decoration: none;
+  transition: 1s;
   margin: 10px;
 }
 main .manicuras button:hover {
   background-color: #d2e6e4;
+  transform: scale(1.1);
 }
 main .reserva {
   display: flex;
@@ -693,6 +714,7 @@ main .info-reserva .caja-reserva button {
   background-color: #f7bac6;
   transition: background-color 0.3s;
   text-decoration: none;
+  transition: 1s;
   grid-area: boton;
   width: 100px;
   justify-self: end;
@@ -701,6 +723,7 @@ main .info-reserva .caja-reserva button {
 }
 main .info-reserva .caja-reserva button:hover {
   background-color: #d2e6e4;
+  transform: scale(1.1);
 }
 main .info-reserva button {
   border: none;
@@ -714,6 +737,7 @@ main .info-reserva button {
   background-color: #f7bac6;
   transition: background-color 0.3s;
   text-decoration: none;
+  transition: 1s;
   grid-area: boton;
   width: 100px;
   justify-self: end;
@@ -722,6 +746,7 @@ main .info-reserva button {
 }
 main .info-reserva button:hover {
   background-color: #d2e6e4;
+  transform: scale(1.1);
 }
 
 footer {
@@ -769,11 +794,18 @@ footer .formulario form button {
   background-color: d2e6e4;
   transition: background-color 0.3s;
   text-decoration: none;
+  transition: 1s;
 }
 footer .formulario form button:hover {
   background-color: #f7bac6;
 }
 
+@media screen and (max-width: 1280px) {
+  main .servicios .serv-cont div img {
+    height: 200px;
+    width: 200px;
+  }
+}
 @media screen and (max-width: 1150px) {
   header {
     flex-direction: column;
