@@ -1,0 +1,1030 @@
+@charset "UTF-8";
+/*--VARIABLES--*/
+/*Tipografías*/
+/*--LISTAS--*/
+/*Colores*/
+/*--MIXIN--*/
+/*botones*/
+/*TIPOGRAFÍAS*/
+@import url("https://use.typekit.net/dfr4xfr.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+/*RESET*/
+* {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: inherit;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+body {
+  background-color: #faf1dc;
+}
+
+/*BOOTSTRAP*/
+.navbar > .container-fluid {
+  width: 50%;
+}
+
+.navbar-expand-lg {
+  width: 100%;
+}
+
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  background-color: #f7bac6;
+  font-size: 35px;
+  color: #faf1dc;
+  text-shadow: 2px 2px 8px #36382e;
+  text-align: center;
+  padding: 10px;
+  /* Espaciado interno */
+  border-radius: 5px;
+  /* Esquinas redondeadas */
+  margin-top: 20px;
+}
+
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #36382e;
+  font-size: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-right: 20px;
+}
+header nav div {
+  display: flex;
+  align-items: center;
+}
+header nav div a img {
+  height: 80px;
+  margin-left: 20px;
+}
+header nav div h1 {
+  font-family: "ohno-softie-variable", sans-serif;
+  font-variation-settings: "wght" 550;
+  color: #f7bac6;
+  letter-spacing: 3px;
+  word-spacing: 6px;
+  border-radius: 5px; /* Esquinas redondeadas */
+  text-shadow: 2px 2px 4px #36382e;
+  margin-left: 10px;
+}
+header nav div ul li {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #36382e;
+  padding: 0px 10px;
+  margin: 8px;
+  background-color: #faf1dc;
+  border-radius: 50px;
+  text-align: center;
+}
+
+/*!----INDEX----*/
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+main .hero {
+  text-align: center;
+  height: 250px;
+  background-image: url("../img/banner.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+main .hero a {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 18px;
+  color: #36382e;
+  background-color: #d2e6e4;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+main .hero a:hover {
+  background-color: #faf1dc;
+}
+main .servicios .serv-cont {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+main .servicios .serv-cont div {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+main .servicios .serv-cont div img {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  margin-top: 20px;
+}
+main .servicios .serv-cont div p {
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #36382e;
+  font-size: 15px;
+}
+main .servicios .serv-cont div a {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 15px;
+  color: #36382e;
+  background-color: #d2e6e4;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+main .servicios .serv-cont div a:hover {
+  background-color: #f7bac6;
+}
+main .productos .prod-cont {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+main .productos .prod-cont div {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+main .productos .prod-cont div img {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  margin-top: 20px;
+  padding: 20px;
+}
+main .productos .prod-cont div p {
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #36382e;
+  font-size: 15px;
+}
+main .productos .prod-cont div a {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 15px;
+  color: #36382e;
+  background-color: #d2e6e4;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+main .productos .prod-cont div a:hover {
+  background-color: #f7bac6;
+}
+
+/*!----NOSOTROS----*/
+main .instagram {
+  display: grid;
+  grid-template-areas: "h2 h2 h2" "arroba . . " "publi publi publi " "publi publi publi";
+  justify-items: center;
+}
+main .instagram h2 {
+  grid-area: h2;
+}
+main .instagram a {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  color: #f7bac6;
+  font-size: 30px;
+  grid-area: arroba;
+  margin-left: 20px;
+}
+main .instagram .insta {
+  width: 80%;
+  grid-area: publi;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+main .instagram .insta img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+main .consulta {
+  display: flex;
+  flex-direction: column;
+}
+main .consulta div {
+  margin: 20px;
+}
+main .consulta div form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+main .consulta div form input {
+  border: #36382e solid 1px;
+  background-color: #faf6ed;
+  padding: 10px;
+  border-radius: 20px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-align: left;
+  width: 80%;
+}
+main .consulta div form .comentario {
+  height: 100px;
+}
+main .consulta button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 18px;
+  color: #36382e;
+  background-color: #f7bac6;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  width: 20%;
+  margin: auto;
+}
+main .consulta button:hover {
+  background-color: #d2e6e4;
+}
+main .mapa {
+  display: flex;
+  justify-content: center;
+  margin: 2%;
+}
+main .mapa iframe {
+  width: 80%;
+}
+main .mapa .infodellocal {
+  width: 20%;
+  padding: 2%;
+}
+main .mapa .infodellocal p {
+  font-size: 20px;
+  text-align: justify;
+}
+
+/*!----PRODUCTOS----*/
+main .buscador {
+  display: flex;
+  justify-content: space-between;
+  padding: 1%;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #36382e;
+}
+main .buscador .barra-busca {
+  display: flex;
+  justify-content: center;
+}
+main .buscador .barra-busca input {
+  background-color: #faf6ed;
+  padding: 5px;
+  border-radius: 20px;
+  text-align: center;
+  margin-right: 10px;
+}
+main .buscador form button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 15px;
+  color: #36382e;
+  background-color: #d2e6e4;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+main .buscador form button:hover {
+  background-color: #f7bac6;
+}
+main .texto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .texto p {
+  margin: 0;
+  margin-left: 20px;
+}
+main .texto .wpp {
+  margin-right: 20px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+main .texto .wpp button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 15px;
+  color: #36382e;
+  background-color: #d2e6e4;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  margin-right: 20px;
+}
+main .texto .wpp button:hover {
+  background-color: #f7bac6;
+}
+main .texto .wpp img {
+  height: 40px;
+  width: auto;
+  margin: 0;
+}
+main .grilla {
+  display: grid;
+  grid-template-columns: 0.5FR 3fr;
+  gap: 20px;
+  padding: 20px;
+}
+main .grilla aside {
+  justify-self: center;
+  padding: 20px;
+  border-radius: 8px;
+}
+main .grilla aside h3 {
+  margin-top: 0;
+}
+main .grilla aside .filtros {
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #2f2e38;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+}
+main .grilla aside .filtros label {
+  margin-bottom: 10px;
+}
+main .grilla .prod-grilla {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-self: center;
+}
+main .grilla .prod-grilla h2 {
+  grid-column: span 3;
+  text-align: center;
+  margin-bottom: 20px;
+}
+main .grilla .prod-grilla .producto {
+  position: relative; /* Para posicionar el precio sobre la imagen */
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+}
+main .grilla .prod-grilla .producto img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+main .grilla .prod-grilla .producto .precio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  color: #2f2e38;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: bold;
+  opacity: 0; /* Oculto por defecto */
+  transition: all 0.3s ease; /* Transición suave */
+}
+main .grilla .prod-grilla .producto .precio:hover {
+  background-color: #faf1dc;
+  opacity: 0.75;
+}
+main .grilla .prod-grilla .producto .descripcion {
+  margin-top: 10px;
+  color: #2f2e38;
+  font-size: 14px;
+}
+
+/*!----SERVICIOS----*/
+main .buscador {
+  display: flex;
+  justify-content: space-between;
+  padding: 1%;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #36382e;
+}
+main .buscador .barra-busca {
+  display: flex;
+  justify-content: center;
+}
+main .buscador .barra-busca input {
+  background-color: #faf6ed;
+  padding: 5px;
+  border-radius: 20px;
+  text-align: center;
+  margin-right: 10px;
+}
+main .buscador form button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 15px;
+  color: #36382e;
+  background-color: #d2e6e4;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+main .buscador form button:hover {
+  background-color: #f7bac6;
+}
+main .page-servicios {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+main .page-servicios .serv {
+  display: flex;
+  margin: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+main .page-servicios .serv img {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  margin-top: 20px;
+  padding: 20px;
+}
+main .page-servicios .serv div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 75%;
+}
+main .page-servicios .serv div p {
+  margin-left: 20px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+main .page-servicios .serv div a {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 15px;
+  color: #36382e;
+  background-color: #d2e6e4;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+main .page-servicios .serv div a:hover {
+  background-color: #f7bac6;
+}
+
+/*!----TURNOS----*/
+main .hero-turnos {
+  text-align: center;
+  height: 350px;
+  background-image: url("../img//banner_turnos.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+main .hero-turnos p {
+  font-size: 20px;
+  color: #faf1dc;
+  border-radius: 5px;
+  text-shadow: 2px 2px 4px #36382e;
+}
+main .manicuras {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+main .manicuras button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 15px;
+  color: #36382e;
+  background-color: #f7bac6;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  margin: 10px;
+}
+main .manicuras button:hover {
+  background-color: #d2e6e4;
+}
+main .reserva {
+  display: flex;
+  flex-direction: row;
+  line-height: 1.6;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #36382e;
+  padding: 10px;
+  border-radius: 10px;
+  justify-items: center;
+  margin: 10px;
+  border: none;
+  padding: 5px;
+  width: 100%;
+  justify-content: center;
+}
+main .reserva .seleccion {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #36382e;
+  padding: 10px;
+  background-color: #d2e6e4;
+  border-radius: 10px;
+  justify-items: center;
+}
+main .reserva .seleccion h3 {
+  border-radius: 5px;
+}
+main .reserva .calendario-cont {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #36382e;
+  padding: 10px;
+  background-color: #d2e6e4;
+  border-radius: 10px;
+  justify-items: center;
+  margin-left: 90px;
+  margin-right: 90px;
+  border: none;
+  padding: 5px;
+}
+main .reserva .calendario-cont .calendar {
+  border: none;
+  padding: 5px;
+}
+main .reserva .calendario-cont .calendar input {
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #36382e;
+}
+main .reserva .datos-contacto {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #36382e;
+  padding: 10px;
+  background-color: #d2e6e4;
+  border-radius: 10px;
+  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main .info-reserva {
+  border: #2f2e38 solid 1px;
+  border-radius: 10px;
+  background-color: rgba(252, 200, 210, 0.262745098);
+  margin: 20px;
+  display: grid;
+  grid-template-areas: "titulo titulo titulo" "caja caja caja" ". . boton";
+  grid-area: caja;
+  margin: 20px;
+  border: #2f2e38 solid 1px;
+  width: 95%;
+  border-radius: 10px;
+}
+main .info-reserva h3 {
+  grid-area: titulo;
+  justify-self: center;
+  margin-top: 10px;
+}
+main .info-reserva .caja-reserva {
+  grid-area: caja;
+  margin: 20px;
+  border: #2f2e38 solid 1px;
+  width: 200px;
+  border-radius: 10px;
+}
+main .info-reserva .caja-reserva p {
+  margin: 10px 20px;
+}
+main .info-reserva .caja-reserva button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 15px;
+  color: #36382e;
+  background-color: #f7bac6;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  grid-area: boton;
+  width: 100px;
+  justify-self: end;
+  margin: 20px;
+  text-align: center;
+}
+main .info-reserva .caja-reserva button:hover {
+  background-color: #d2e6e4;
+}
+main .info-reserva button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 15px;
+  color: #36382e;
+  background-color: #f7bac6;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  grid-area: boton;
+  width: 100px;
+  justify-self: end;
+  margin: 20px;
+  text-align: center;
+}
+main .info-reserva button:hover {
+  background-color: #d2e6e4;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+footer .redes a {
+  text-decoration: none;
+}
+footer .redes a img {
+  height: 40px;
+  margin-left: 20px;
+}
+footer .formulario {
+  text-align: right;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  width: 45%;
+  justify-content: end;
+}
+footer .formulario p {
+  margin-right: 10px;
+}
+footer .formulario form input {
+  background-color: #faf1dc;
+  padding: 5px;
+  border-radius: 20px;
+  text-align: center;
+  margin-right: 10px;
+}
+footer .formulario form button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 15px;
+  color: #36382e;
+  background-color: d2e6e4;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+footer .formulario form button:hover {
+  background-color: #f7bac6;
+}
+
+@media screen and (max-width: 1150px) {
+  header {
+    flex-direction: column;
+    height: 150px;
+    align-items: center;
+  }
+  header nav {
+    width: 100%;
+    justify-content: center;
+  }
+  main .HERO {
+    height: 200px;
+  }
+  main .hero h2 {
+    font-size: 30px;
+  }
+  main .servicios .serv-cont div img {
+    height: 200px;
+    width: 200px;
+  }
+  main .productos .prod-cont div img {
+    height: 200px;
+    width: 200px;
+  }
+  main .grilla .prod-grilla {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  main .grilla .prod-grilla h2 {
+    grid-column: span 2;
+  }
+  main .grilla .prod-grilla .producto img {
+    padding: 2%;
+  }
+}
+@media screen and (max-width: 995px) {
+  .navbar-toggler {
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width: 875px) {
+  main .productos .prod-cont {
+    flex-wrap: wrap;
+  }
+  main .servicios .serv-cont {
+    flex-wrap: wrap;
+  }
+  main .grilla .prod-grilla {
+    grid-template-columns: 1fr;
+  }
+  main .grilla .prod-grilla h2 {
+    grid-column: span 1;
+  }
+  main .grilla .prod-grilla .producto img {
+    padding: 2%;
+  }
+  main .instagram {
+    grid-template-areas: "h2 h2" "arroba . " "publi publi" "publi publi";
+  }
+  main .instagram .insta {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  main .mapa {
+    flex-direction: column;
+    align-items: center;
+  }
+  main .mapa .infodellocal {
+    width: 80%;
+  }
+  main .page-servicios .serv div p {
+    font-size: 14px;
+  }
+  main .reserva {
+    justify-content: space-between;
+    width: 90%;
+  }
+  main .reserva .calendario-cont {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 820px) {
+  main .reserva {
+    flex-direction: column;
+    align-items: center;
+  }
+  main .reserva .calendario-cont {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 740px) {
+  main .texto p {
+    font-size: 13px;
+  }
+  main .texto .wpp {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 658px) {
+  main .page-servicios .serv {
+    flex-direction: column;
+    align-items: center;
+  }
+  main .page-servicios .serv div {
+    width: 90%;
+  }
+  main .buscador {
+    font-size: 12px;
+  }
+  main .grilla {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+  main .grilla .prod-grilla img {
+    width: 300px;
+  }
+  main .texto .wpp {
+    font-size: 11px;
+  }
+  main .info-reserva {
+    margin-right: 50px;
+  }
+}
+@media screen and (max-width: 560px) {
+  header {
+    height: 100px;
+  }
+  header nav div a img {
+    height: 60px;
+  }
+  header nav div ul li a {
+    font-size: 14px;
+  }
+  main .buscador form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
+  }
+  main .buscador .barra-busca {
+    align-content: center;
+  }
+  footer .formulario p {
+    font-size: 12px;
+  }
+  footer .formulario form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  footer .formulario form input {
+    font-size: 12px;
+  }
+  footer .formulario form button {
+    font-size: 12px;
+    padding: 5px;
+  }
+  main .instagram {
+    grid-template-areas: "h2 " "arroba  " "publi " "publi ";
+  }
+  main .instagram .insta {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+  footer .redes a img {
+    height: 30px;
+  }
+  .navbar-brand {
+    padding: 0px;
+    margin-right: 0;
+  }
+  main .mapa .infodellocal p {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 480px) {
+  header nav div ul li a {
+    margin: 2px;
+    padding: 2px;
+  }
+  header nav div h1 {
+    font-size: 30px;
+    word-spacing: 2px;
+  }
+  header nav div img {
+    height: 60px;
+  }
+  main .hero-turnos p {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 405px) {
+  footer .formulario {
+    flex-direction: column;
+    justify-content: center;
+  }
+  footer .formulario form input {
+    margin: 8px;
+  }
+  main .hero {
+    height: 150px;
+  }
+  main .hero h2 {
+    font-size: 20px;
+  }
+  main .hero a {
+    font-size: 14px;
+    padding: 5px, 10px;
+  }
+  main .texto {
+    flex-direction: column;
+  }
+  main .servicios .serv-cont div {
+    height: auto;
+  }
+  main .productos .prod-cont div {
+    height: auto;
+  }
+}
+@media screen and (max-width: 391px) {
+  header nav div h1 {
+    font-size: 28px;
+  }
+  header nav div a img {
+    height: 50px;
+  }
+  header nav div ul li {
+    font-size: 12px;
+  }
+  /**/
+  main .instagram a {
+    font-size: 20px;
+  }
+  .navbar-toggler {
+    padding: 0px;
+  }
+}
+
+/*# sourceMappingURL=estilos.css.map */

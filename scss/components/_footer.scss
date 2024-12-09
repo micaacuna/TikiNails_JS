@@ -1,0 +1,43 @@
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    .redes{
+        a{
+            text-decoration: none;
+            img{
+                height: 40px;
+                margin-left: 20px;
+            }
+        }
+    }
+    .formulario{
+        text-align: right;
+        font-family: $fuente-3;
+        font-weight: 500;
+        font-style: normal;
+        display: flex;
+        align-items: center;
+        width: 45%;
+        justify-content: end;
+        p{
+            margin-right: 10px;
+        }
+        form{
+            input{
+                background-color:nth($colores, 1);
+                padding: 5px;
+                border-radius: 20px;
+                text-align: center;
+                margin-right: 10px;
+            }
+            button{
+                @include boton(d2e6e4,500,normal,15px);
+                &:hover{
+                    background-color: nth($colores, 2);
+                }
+            }
+        }
+    }
+}

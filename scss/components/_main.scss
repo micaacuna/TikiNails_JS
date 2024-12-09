@@ -1,0 +1,539 @@
+/*!----INDEX----*/
+main {
+    @extend %centrado;
+
+    .hero {
+        @extend %centrado;
+        text-align: center;
+        height: 250px;
+        background-image: url("../img/banner.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+
+        a {
+            @include boton(#d2e6e4,700,italic,18px);
+            &:hover {
+                background-color:nth($colores, 1);
+            }
+        }
+    }
+
+    .servicios {
+        .serv-cont {
+            @extend %evenly;
+
+            div {
+                height: 400px;
+                @extend %centrado;
+
+                img {
+                    height: 300px;
+                    width: 300px;
+                    object-fit: cover;
+                    margin-top: 20px;
+                }
+
+                p {
+                    font-family: $fuente-3;
+                    font-weight: 500;
+                    font-style: normal;
+                    color: nth($colores, 4);
+                    font-size: 15px;
+                }
+
+                a {
+                    @include boton(#d2e6e4,500,normal,15px);
+                    &:hover {
+                        background-color: nth($colores, 2);
+                    }
+                }
+            }
+        }
+    }
+
+    .productos {
+        .prod-cont {
+            @extend %evenly;
+
+            div {
+                height: 400px;
+                @extend %centrado;
+
+                img {
+                    height: 300px;
+                    width: 300px;
+                    object-fit: cover;
+                    margin-top: 20px;
+                    padding: 20px;
+                }
+
+                p {
+                    font-family: $fuente-3;
+                    font-weight: 500;
+                    font-style: normal;
+                    color: nth($colores, 4);
+                    font-size: 15px;
+                }
+
+                a {
+                    @include boton(#d2e6e4,500,normal,15px);
+                    &:hover {
+                        background-color: nth($colores, 2);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*!----NOSOTROS----*/
+main {
+    .instagram {
+        display:grid;
+        grid-template-areas: 
+        "h2 h2 h2"
+        "arroba . . "
+        "publi publi publi "
+        "publi publi publi"
+        ;
+        justify-items: center;
+        h2 {
+            grid-area: h2;
+        }
+        a {
+            font-family: $fuente-3;
+            font-weight: 900;
+            font-style: normal;
+            color: nth($colores, 2);
+            font-size: 30px;
+            grid-area: arroba;
+            margin-left: 20px;
+        }
+        .insta {
+            width: 80%;
+            grid-area: publi;
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
+            grid-template-rows: repeat(2, 1fr); 
+            gap: 10px; 
+            padding: 10px; 
+            img {
+                width: 100%; 
+                height: auto; 
+                border-radius: 5px; 
+            }
+        }
+    }
+
+    .consulta {
+        @extend %centrado;
+
+        div {
+            margin: 20px;
+            form {
+                @extend %centrado;
+                width: 100%;
+                input {
+                    border: nth($colores, 4) solid 1px;
+                    background-color: #faf6ed;
+                    padding: 10px;
+                    border-radius: 20px;
+                    font-family: $fuente-3;
+                    font-weight: 500;
+                    font-style: normal;
+                    text-align: left;
+                    width: 80%;
+                }
+                .comentario{
+                    height: 100px;
+                }
+                }
+            }
+            button{
+                @include boton(#f7bac6,700,normal,18px);
+                width: 20%;
+                margin: auto;
+                &:hover {
+                    background-color: nth($colores, 3);
+                }
+            }
+    }
+    .mapa{
+        @extend %centrado;
+        margin: 2%;
+        iframe{
+            width: 80%;
+        }
+        .infodellocal{
+            width: 20%;
+            padding: 2%;
+            p{
+                font-size: 20px;
+                text-align: justify;
+            }
+        }
+    }
+}
+/*!----PRODUCTOS----*/
+main{
+    .buscador{
+        display: flex;
+        justify-content: space-between;
+        padding: 1%;
+        font-family: $fuente-3;
+        font-weight: 500;
+        font-style: normal;
+        color: nth($colores, 4);
+        .barra-busca{
+            display: flex;
+            justify-content: center;
+            input{
+                background-color: #faf6ed;
+                padding: 5px;
+                border-radius: 20px;
+                text-align: center;
+                margin-right: 10px;
+            }
+        }
+        form{
+            button{
+                @include boton(#d2e6e4,500,normal,15px);
+                &:hover{
+                    background-color: nth($colores, 2);
+                }
+            }
+        }
+    }
+    .texto{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p{
+            margin: 0;
+            margin-left: 20px;
+        }
+        .wpp{
+            margin-right: 20px;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            button{
+                @include boton(#d2e6e4,500,normal,15px);
+                margin-right: 20px;
+                &:hover{
+                    background-color: nth($colores, 2);
+                }
+            }
+            img{
+                height: 40px;
+                width: auto;
+                margin: 0;
+            }
+        }
+    }
+    .grilla{
+        display: grid;
+        grid-template-columns: 0.5FR 3fr;
+        gap: 20px;
+        padding: 20px;
+        aside{
+            justify-self: center;
+            padding: 20px;
+            border-radius: 8px;
+            h3{
+                margin-top: 0;
+            }
+            .filtros{
+                font-family: $fuente-3;
+                font-weight: 500;
+                font-style: normal;
+                color: #2f2e38;
+                font-size: 15px;
+                display: flex;
+                flex-direction: column;
+                label{
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .prod-grilla{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            justify-self: center;
+            h2{
+                grid-column: span 3;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .producto{
+                position: relative; /* Para posicionar el precio sobre la imagen */
+                text-align: center; 
+                font-family: $fuente-3;
+                font-size: 14px;
+                img{
+                    width: 100%;
+                    height: auto;
+                    border-radius: 8px;
+                }
+                .precio{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(255, 255, 255, 0); 
+                    color: #2f2e38; 
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 25px;
+                    font-weight: bold;
+                    opacity: 0; /* Oculto por defecto */
+                    transition: all 0.3s ease; /* Transición suave */
+                    &:hover{
+                            background-color:nth($colores, 1); 
+    opacity: 0.75;
+                    }
+                }
+                .descripcion{
+                    margin-top: 10px; 
+                    color: #2f2e38;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+/*!----SERVICIOS----*/
+main{
+    .buscador{
+        display: flex;
+        justify-content: space-between;
+        padding: 1%;
+        font-family: $fuente-3;
+        font-weight: 500;
+        font-style: normal;
+        color: nth($colores, 4);
+        .barra-busca{
+            display: flex;
+            justify-content: center;
+            input{
+                background-color: #faf6ed;
+                padding: 5px;
+                border-radius: 20px;
+                text-align: center;
+                margin-right: 10px;
+            }
+        }
+        form{
+            button{
+                @include boton(#d2e6e4,500,normal,15px); 
+                &:hover{
+                    background-color: nth($colores, 2);
+                }
+            }
+        }
+    }
+    .page-servicios{
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        .serv{
+            display: flex;
+            margin: 20px;
+            justify-content:center ;
+            align-items: center;
+            width: 90%;
+            img{
+                height: 300px;
+                width: 300px;
+                object-fit: cover;
+                margin-top: 20px;
+                padding: 20px;
+            }
+            div{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                width: 75%;
+                p{
+                    margin-left: 20px;
+                    font-size: 18px;
+                    line-height: 1.6;
+                }
+                a{
+                    @include boton(#d2e6e4,500,normal,15px);
+                    &:hover{
+                        background-color: nth($colores, 2);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*!----TURNOS----*/
+main{
+    .hero-turnos{
+        text-align: center;
+        height: 350px;
+        background-image: url("../img//banner_turnos.png");
+        background-position:center;
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-attachment: fixed;
+        @extend %centrado;
+        p{
+            font-size: 20px;
+            color:nth($colores, 1);
+            border-radius: 5px;
+            text-shadow: 2px 2px 4px nth($colores, 4);
+        }
+    }
+    .manicuras{
+        @extend %evenly;
+        padding: 20px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+        button{
+            @include boton(#f7bac6,500,normal,15px);
+            margin: 10px;
+            &:hover{
+                background-color: nth($colores, 3);
+            }
+        }
+    }
+    .reserva{
+        display: flex;
+        flex-direction: row;
+        line-height: 1.6;
+        font-family: $fuente-3;
+        font-weight: 500;
+        font-style: normal;
+        color: nth($colores, 4);
+        padding: 10px;
+        border-radius: 10px;
+        justify-items: center;
+        margin: 10px;
+        border: none;
+        padding: 5px;
+        width: 100%;
+        justify-content: center;
+        .seleccion{
+            display: flex;
+            flex-direction: column;
+            line-height: 1.6;
+            font-family: $fuente-3;
+            font-weight: 500;
+            font-style: normal;
+            color: nth($colores, 4);
+            padding: 10px;
+            background-color: nth($colores, 3);
+            border-radius: 10px;
+            justify-items: center;
+            h3{
+                border-radius: 5px;
+            }
+        }
+        .calendario-cont{
+            display: flex;
+            flex-direction: column;
+            line-height: 1.6;
+            font-family: $fuente-3;
+            font-weight: 500;
+            font-style: normal;
+            color: nth($colores, 4);
+            padding: 10px;
+            background-color: nth($colores, 3);
+            border-radius: 10px;
+            justify-items: center;
+            margin-left: 90px;
+            margin-right: 90px;
+            border: none;
+            padding: 5px;
+            .calendar{
+                border: none;
+                padding: 5px;
+                input{
+                    font-family: $fuente-3;
+                    font-weight: 500;
+                    font-style: normal;
+                    color: nth($colores, 4);
+                }
+            }
+        }
+        .datos-contacto{
+            line-height: 1.6;
+            font-family: $fuente-3;
+            font-weight: 500;
+            font-style: normal;
+            color: nth($colores, 4);
+            padding: 10px;
+            background-color: nth($colores, 3);
+            border-radius: 10px;
+            justify-items: center;
+            display:flex ;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+    .info-reserva{
+        border: #2f2e38 solid 1px;
+        border-radius: 10px;
+        background-color: #fcc8d243;
+        margin: 20px;
+        display: grid;
+        grid-template-areas: 
+        "titulo titulo titulo"
+        "caja caja caja"
+        ". . boton"
+        ;
+        grid-area: caja;
+        margin: 20px;  
+        border: #2f2e38 solid 1px;
+        width: 95%;
+        border-radius: 10px;
+        h3{
+            grid-area: titulo;
+            justify-self: center;
+            margin-top: 10px;
+        }
+        .caja-reserva{
+            grid-area: caja;
+            margin: 20px;
+            border: #2f2e38 solid 1px;
+            width: 200px;
+            border-radius: 10px;
+            p{
+                margin: 10px 20px;
+            }
+            button{
+                @include boton(#f7bac6,500,normal,15px);
+                grid-area: boton;
+                width: 100px;
+                justify-self: end;
+                margin: 20px;
+                text-align: center;
+                &:hover{
+                    background-color: nth($colores, 3);
+                }
+            }
+        }
+        button{
+            @include boton(#f7bac6,500,normal,15px);
+            grid-area: boton;
+            width: 100px;
+            justify-self: end;
+            margin: 20px;
+            text-align: center;
+            &:hover{
+                background-color: nth($colores, 3);
+            }
+        }
+    }
+}

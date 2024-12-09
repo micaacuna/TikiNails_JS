@@ -1,0 +1,41 @@
+/*--VARIABLES--*/
+/*Tipografías*/
+$fuente-1: "ohno-softie-variable", sans-serif;
+$fuente-2: "Poppins", sans-serif;
+$fuente-3: "Lato", sans-serif;
+
+/*--LISTAS--*/
+/*Colores*/
+$colores: #faf1dc, #f7bac6, #d2e6e4, #36382e;
+
+/*--MIXIN--*/
+/*botones*/
+@mixin boton ($color-fondo,$peso,$estilo,$fuente) {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-family: $fuente-3;
+    font-weight: $peso;
+    font-style: $estilo;
+    font-size: $fuente;
+    color: nth($colores, 4);
+    background-color: $color-fondo;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+/*--EXTENDS--*/
+/*Centrado*/
+%centrado {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+%evenly {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}

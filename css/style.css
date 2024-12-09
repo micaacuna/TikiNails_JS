@@ -27,7 +27,8 @@ header{
 
 header div{
     display:flex;
-    align-items: center;}
+    align-items: center;
+}
 
 header div h1{
     font-family: "ohno-softie-variable",sans-serif;
@@ -664,7 +665,7 @@ footer{
     border-radius: 5px;
     
 }
-
+/*!-------PONER ESTO CON UN MIXIN!!!!----*/
 .reserva .seleccion, .calendario-cont, .datos-contacto{
     display: flex;
     flex-direction: column;
