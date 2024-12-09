@@ -11,6 +11,7 @@ main {
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
+        align-items: center;
 
         a {
             @include boton(#d2e6e4,700,italic,18px);
@@ -25,8 +26,9 @@ main {
             @extend %evenly;
 
             div {
-                height: 400px;
                 @extend %centrado;
+                height: 400px;
+                align-items: center;
 
                 img {
                     height: 300px;
@@ -60,6 +62,7 @@ main {
             div {
                 height: 400px;
                 @extend %centrado;
+                align-items: center;
 
                 img {
                     height: 300px;
@@ -128,12 +131,14 @@ main {
     }
 
     .consulta {
-        @extend %centrado;
-
+        display: flex;
+        flex-direction: column;
         div {
             margin: 20px;
             form {
-                @extend %centrado;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
                 width: 100%;
                 input {
                     border: nth($colores, 4) solid 1px;
@@ -161,7 +166,8 @@ main {
             }
     }
     .mapa{
-        @extend %centrado;
+        display: flex;
+        justify-content: center;
         margin: 2%;
         iframe{
             width: 80%;
@@ -388,6 +394,8 @@ main{
         background-size:cover;
         background-attachment: fixed;
         @extend %centrado;
+        align-items: center;
+
         p{
             font-size: 20px;
             color:nth($colores, 1);
@@ -468,6 +476,8 @@ main{
             }
         }
         .datos-contacto{
+            display: flex;
+            flex-direction: column;
             line-height: 1.6;
             font-family: $fuente-3;
             font-weight: 500;

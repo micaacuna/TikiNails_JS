@@ -30,12 +30,10 @@ $colores: #faf1dc, #f7bac6, #d2e6e4, #36382e;
     display:flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
 }
 
 %evenly {
     display:flex;
-    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 }
