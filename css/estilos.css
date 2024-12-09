@@ -218,6 +218,19 @@ main .productos .prod-cont div a:hover {
 }
 
 /*!----NOSOTROS----*/
+main .nosotros {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .nosotros h2 {
+  width: 20%;
+  align-items: center;
+}
+main .nosotros p {
+  margin: 20px;
+}
 main .instagram {
   display: grid;
   grid-template-areas: "h2 h2 h2" "arroba . . " "publi publi publi " "publi publi publi";

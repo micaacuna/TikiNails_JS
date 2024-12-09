@@ -36,6 +36,7 @@ footer{
                 @include boton(d2e6e4,500,normal,15px);
                 &:hover{
                     background-color: nth($colores, 2);
+                    
                 }
             }
         }

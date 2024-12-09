@@ -99,6 +99,19 @@ main {
 
 /*!----NOSOTROS----*/
 main {
+    .nosotros{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h2{
+            width: 20%;
+            align-items: center;
+        }
+        p{
+            margin:20px;
+        }
+    }
     .instagram {
         display: grid;
         grid-template-areas:
