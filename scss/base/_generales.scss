@@ -46,3 +46,10 @@ h3{
     color: #36382e;
     font-size: 20px;
 }
+
+img{
+    transition:1s;
+    &:hover{
+        transform: scale(1.1);
+    }
+}

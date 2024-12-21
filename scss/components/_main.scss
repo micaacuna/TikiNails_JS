@@ -105,7 +105,7 @@ main {
         justify-content: center;
         align-items: center;
         h2{
-            width: 20%;
+            
             align-items: center;
         }
         p{
@@ -227,6 +227,7 @@ main {
         font-weight: 500;
         font-style: normal;
         color: nth($colores, 4);
+        padding: 10px;
 
         .barra-busca {
             display: flex;
@@ -238,11 +239,16 @@ main {
                 border-radius: 20px;
                 text-align: center;
                 margin-right: 10px;
+
             }
         }
 
         form {
+            label{
+                margin-right: 10px;
+            }
             button {
+                margin-left: 10px;
                 @include boton(#d2e6e4, 500, normal, 15px);
 
                 &:hover {
@@ -378,41 +384,7 @@ main {
 
 /*!----SERVICIOS----*/
 main {
-    .buscador {
-        display: flex;
-        justify-content: space-between;
-        padding: 1%;
-        font-family: $fuente-3;
-        font-weight: 500;
-        font-style: normal;
-        color: nth($colores, 4);
-
-        .barra-busca {
-            display: flex;
-            justify-content: center;
-
-            input {
-                background-color: #faf6ed;
-                padding: 5px;
-                border-radius: 20px;
-                text-align: center;
-                margin-right: 10px;
-            }
-        }
-
-        form {
-            button {
-                @include boton(#d2e6e4, 500, normal, 15px);
-
-                &:hover {
-                    background-color: nth($colores, 2);
-                    transform: scale(1.1);
-                }
-            }
-        }
-    }
-
-    .page-servicios {
+        .page-servicios {
         display: flex;
         flex-direction: column;
         margin: 20px;

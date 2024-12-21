@@ -43,6 +43,13 @@ header{
                     background-color:nth($colores, 1);
                     border-radius: 50px;
                     text-align: center;
+                    a{
+                        transition: 1s;
+                        &:hover{
+                            background-color: nth($colores,2);
+                            border-radius: 50px;
+                        }
+                    }
                 }
             }
         }

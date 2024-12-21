@@ -71,6 +71,13 @@ h3 {
   font-size: 20px;
 }
 
+img {
+  transition: 1s;
+}
+img:hover {
+  transform: scale(1.1);
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -114,6 +121,13 @@ header nav div ul li {
   background-color: #faf1dc;
   border-radius: 50px;
   text-align: center;
+}
+header nav div ul li a {
+  transition: 1s;
+}
+header nav div ul li a:hover {
+  background-color: #f7bac6;
+  border-radius: 50px;
 }
 
 /*!----INDEX----*/
@@ -225,7 +239,6 @@ main .nosotros {
   align-items: center;
 }
 main .nosotros h2 {
-  width: 20%;
   align-items: center;
 }
 main .nosotros p {
@@ -335,6 +348,7 @@ main .buscador {
   font-weight: 500;
   font-style: normal;
   color: #36382e;
+  padding: 10px;
 }
 main .buscador .barra-busca {
   display: flex;
@@ -347,7 +361,11 @@ main .buscador .barra-busca input {
   text-align: center;
   margin-right: 10px;
 }
+main .buscador form label {
+  margin-right: 10px;
+}
 main .buscador form button {
+  margin-left: 10px;
   border: none;
   padding: 10px 20px;
   border-radius: 20px;
@@ -482,44 +500,6 @@ main .grilla .prod-grilla .producto .descripcion {
 }
 
 /*!----SERVICIOS----*/
-main .buscador {
-  display: flex;
-  justify-content: space-between;
-  padding: 1%;
-  font-family: "Lato", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  color: #36382e;
-}
-main .buscador .barra-busca {
-  display: flex;
-  justify-content: center;
-}
-main .buscador .barra-busca input {
-  background-color: #faf6ed;
-  padding: 5px;
-  border-radius: 20px;
-  text-align: center;
-  margin-right: 10px;
-}
-main .buscador form button {
-  border: none;
-  padding: 10px 20px;
-  border-radius: 20px;
-  font-family: "Lato", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 15px;
-  color: #36382e;
-  background-color: #d2e6e4;
-  transition: background-color 0.3s;
-  text-decoration: none;
-  transition: 1s;
-}
-main .buscador form button:hover {
-  background-color: #f7bac6;
-  transform: scale(1.1);
-}
 main .page-servicios {
   display: flex;
   flex-direction: column;
