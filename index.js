@@ -16,43 +16,58 @@ for (let item of servicios) {
 }
 
 listaServicios = listaServicios.slice(0, -2);
-
-function clienta () {
-    let esClienta = confirm("¡Bienvenida a Tiki Nails? ¿Sos clienta regular? ")
-    if (esClienta === false ){
-        nombreclienta = prompt("Ingresá tu nombre");
-        apellidoclienta = prompt("Ingresá tu apellido");
-        Contacto = prompt("Ingresá un teléfono de contacto");
-        servicioElegido = prompt("¿Qué servicio querés reservar " + listaServicios + "?");
-    }
+function clienta() {
+    let esClienta = confirm("¡Bienvenida a Tiki Nails! ¿Sos clienta regular?");
+    
+    if (esClienta === false) {
+        do {
+            nombreclienta = prompt("Ingresá tu nombre");
+        } while (!nombreclienta || nombreclienta.trim() === "");
+    
+        do {
+            apellidoclienta = prompt("Ingresá tu apellido");
+        } while (!apellidoclienta || apellidoclienta.trim() === "");
+    
+        do {
+            Contacto = prompt("Ingresá un teléfono de contacto");
+        } while (!Contacto || Contacto.trim() === "");
+    } 
     else {
-        nombreclienta = prompt("Ingresá tu nombre");
-        apellidoclienta = prompt("Ingresá tu apellido");
-        servicioElegido = prompt("¿Qué servicio querés reservar " + listaServicios + "?");
+        do {
+            nombreclienta = prompt("Ingresá tu nombre");
+        } while (!nombreclienta || nombreclienta.trim() === "");
+    
+        do {
+            apellidoclienta = prompt("Ingresá tu apellido");
+        } while (!apellidoclienta || apellidoclienta.trim() === "");
     }
-
 }
-
 
 const calcularPrecio = () => {
     let precio = 0;
     
-    switch (servicioElegido.toLowerCase()) {
-        case "soft gel":
-        case "kapping gel":
-        case "esmaltado semipermanente":
-        case "press on":
-            for (let item of servicios) {
-                if (item.Servicio.toLowerCase() === servicioElegido.toLowerCase()) {
-                    precio = item.Precio;
-                    break;
+    do {
+        if (servicioElegido.trim() === "") {
+            servicioElegido = prompt("No se ha ingresado un servicio. Por favor, elige uno: " + listaServicios);
+        }
+        
+        switch (servicioElegido.toLowerCase()) {
+            case "soft gel":
+            case "kapping gel":
+            case "esmaltado semipermanente":
+            case "press on":
+                for (let item of servicios) {
+                    if (item.Servicio.toLowerCase() === servicioElegido.toLowerCase()) {
+                        precio = item.Precio;
+                        break;
+                    }
                 }
-            }
-            break;
-        default:
-            prompt("El servicio ingresado no es válido. Ingresalo nuevamente (Soft Gel, Kapping Gel, Esmaltado Semipermanente, Press On");
-            break;
-    }
+                break;
+            default:
+                servicioElegido = prompt("El servicio ingresado no es válido. Por favor, elige uno de los siguientes: " + listaServicios);
+                break;
+        }
+    } while (precio === 0); 
     
     return precio;
 }
