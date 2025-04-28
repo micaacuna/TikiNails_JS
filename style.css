@@ -132,7 +132,7 @@ main section div a{
 .hero {
     text-align: center;
     height: 250px;
-    background-image: url("../img/banner.png");
+    background-image: url("./img/banner.png");
     background-position:center;
     background-repeat: no-repeat;
     background-size:cover;
@@ -596,7 +596,7 @@ footer{
 .hero-turnos {
     text-align: center;
     height: 350px;
-    background-image: url("../img//banner_turnos.png");
+    background-image: url("./img//banner_turnos.png");
     background-position:center;
     background-repeat: no-repeat;
     background-size:cover;
