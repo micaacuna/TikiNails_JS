@@ -487,6 +487,7 @@ main .grilla .prod-grilla .producto .precio {
   opacity: 0;
   /* Oculto por defecto */
   transition: all 0.3s ease;
+  pointer-events: none;
   /* Transición suave */
 }
 main .grilla .prod-grilla .producto .precio:hover {
@@ -1038,3 +1039,35 @@ footer .formulario form button:hover {
 }
 
 /*# sourceMappingURL=estilos.css.map */
+
+/* === Botones del carrito === */
+.btn-carrito {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 15px;
+  color: #36382e;
+  background-color: #d2e6e4;
+  transition: background-color 0.3s, transform 0.3s;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.btn-carrito:hover {
+  background-color: #f7bac6;
+  transform: scale(1.1);
+}
+
+/* === Estilos para el contenedor del carrito === */
+#carrito-container {
+  background-color: #faf6ed;
+  border: 2px solid #f7bac6;
+  border-radius: 10px;
+  padding: 20px;
+  font-family: "Lato", sans-serif;
+  color: #2f2e38;
+  margin: 20px;
+}
