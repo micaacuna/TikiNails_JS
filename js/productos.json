@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "nombre": "Esmalte Anush 143",
+        "precio": 1500,
+        "imagen": "../img/esmalte_anush_143.png"
+    },
+    {
+        "id": 2,
+        "nombre": "Bonder IBD",
+        "precio": 2000,
+        "imagen": "../img/bonder_ibd.png"
+    },
+    {
+        "id": 3,
+        "nombre": "Esmalte OPI Rojo",
+        "precio": 2200,
+        "imagen": "../img/esmalte_opi_rojo.png"
+    },
+    {
+        "id": 4,
+        "nombre": "Top Coat Meliné",
+        "precio": 1800,
+        "imagen": "../img/top_coat_meline.png"
+    },
+    {
+        "id": 5,
+        "nombre": "Kapping gel Navi",
+        "precio": 3500,
+        "imagen": "../img/kapping_navi.png"
+    },
+    {
+        "id": 6,
+        "nombre": "Esmalte Navi amarillo",
+        "precio": 3000,
+        "imagen": "../img/color_navi.png"
+    },
+    {
+        "id": 7,
+        "nombre": "Esmaltes Charm Limit Rosa",
+        "precio": 6000,
+        "imagen": "../img/esmaltes_charm_rosa.png"
+    },
+    {
+        "id": 8,
+        "nombre": "Esmaltes Charm Limit Azul",
+        "precio": 6000,
+        "imagen": "../img/esmaltes_charm_azul.png"
+    }
+]

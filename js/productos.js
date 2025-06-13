@@ -1,4 +1,4 @@
-//FUNCIONALIDAD PARA PRODUCTOS.HTML ---- ENTREGA 2
+// FUNCIONALIDAD PARA PRODUCTOS.HTML ---- ENTREGA FINAL CON FETCH
 
 // Clase Producto
 class Producto {
@@ -10,44 +10,46 @@ class Producto {
     }
 }
 
-// Lista de productos 
-const listaProductos = [
-    new Producto(1, "Esmalte Anush 143", 1500, "../img/esmalte_anush_143.png"),
-    new Producto(2, "Bonder IBD", 2000, "../img/bonder_ibd.png"),
-    new Producto(3, "Esmalte OPI Rojo", 2200, "../img/esmalte_opi_rojo.png"),
-    new Producto(4, "Top Coat Meliné", 1800, "../img/top_coat_meline.png"),
-    new Producto(5, "Kapping gel Navi", 3500, "../img/kapping_navi.png"),
-    new Producto(6, "Esmalte Navi amarillo", 3000, "../img/color_navi.png"),
-    new Producto(7, "Esmaltes Charm Limit Rosa", 6000, "../img/esmaltes_charm_rosa.png"),
-    new Producto(8, "Esmaltes Charm Limit Azul", 6000, "../img/esmaltes_charm_azul.png")
-];
-
-// Mostrar productos en el DOM
 const contenedorProductos = document.getElementById("contenedor-productos");
-
-listaProductos.forEach(producto => {
-    const tarjeta = document.createElement("div");
-    tarjeta.className = "producto";
-    tarjeta.innerHTML = `
-        <img src="${producto.imagen}" alt="${producto.nombre}">
-        <p class="precio">$${producto.precio}</p>
-        <p class="descripcion">${producto.nombre}</p>
-        <button class="btn-agregar" data-id="${producto.id}">Agregar al carrito</button>
-    `;
-    contenedorProductos.appendChild(tarjeta);
-});
-
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+let listaProductos = [];
+
+// Cargar productos desde archivo JSON
+fetch("../js/productos.json")
+    .then(res => res.json())
+    .then(data => {
+        listaProductos = data.map(item => new Producto(item.id, item.nombre, item.precio, item.imagen));
+        renderizarProductos(listaProductos);
+    })
+    .catch(error => {
+        console.error("Error al cargar productos:", error);
+    });
+
+function renderizarProductos(productos) {
+    productos.forEach(producto => {
+        const tarjeta = document.createElement("div");
+        tarjeta.className = "producto";
+        tarjeta.innerHTML = `
+            <img src="${producto.imagen}" alt="${producto.nombre}">
+            <p class="precio">$${producto.precio}</p>
+            <p class="descripcion">${producto.nombre}</p>
+            <button class="btn-agregar" data-id="${producto.id}">Agregar al carrito</button>
+        `;
+        contenedorProductos.appendChild(tarjeta);
+    });
+}
 
 // Agregar producto al carrito
 document.addEventListener("click", function (e) {
     if (e.target.classList.contains("btn-agregar")) {
         const idProducto = parseInt(e.target.dataset.id);
         const productoSeleccionado = listaProductos.find(p => p.id === idProducto);
-        carrito.push(productoSeleccionado);
-        localStorage.setItem("carrito", JSON.stringify(carrito));
-        mostrarMensaje(`${productoSeleccionado.nombre} agregado al carrito`);
-        actualizarContador();
+        if (productoSeleccionado) {
+            carrito.push(productoSeleccionado);
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            mostrarMensaje(`${productoSeleccionado.nombre} agregado al carrito`);
+            actualizarContador();
+        }
     }
 });
 
@@ -102,7 +104,7 @@ if (botonVaciar) {
         carrito = [];
         mostrarMensaje("Carrito vaciado");
         actualizarContador();
-        mostrarCarrito(); // Para actualizar la vista vacía
+        mostrarCarrito();
     });
 }
 
